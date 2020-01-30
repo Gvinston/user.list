@@ -1,2 +1,7 @@
 /bitrix/*
 /upload/*
+/.htaccess
+/index.php
+/urlrewrite.php
+/web.config
+/.access.php
