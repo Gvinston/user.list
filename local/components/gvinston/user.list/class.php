@@ -229,7 +229,7 @@ class UserList extends \CBitrixComponent
 
         $arParams["CACHE_TIME"] = empty($this->arParams["CACHE_TIME"]) ? 60*60*24 : $this->arParams["CACHE_TIME"];
 
-        $cache_id = serialize(array($arParams, $request->getQueryList(), $request->getPostList(), array('users-' . $this->countUsers())));
+        $cache_id = serialize(array($this->arParams, $request->getQueryList(), $request->getPostList(), array('users-' . $this->countUsers())));
         $obCache = new CPHPCache;
         if ($obCache->InitCache($this->arParams['CACHE_TIME'], $cache_id, '/'))
         {
